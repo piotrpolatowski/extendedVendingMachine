@@ -1,0 +1,5 @@
+des (0, 4, 4)
+(0, getWater, 1)
+(1, getWater, 2)
+(2, getWater, 3)
+(3, refillWater, 0)

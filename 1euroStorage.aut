@@ -1,0 +1,7 @@
+des(0, 6, 6)
+(0, "store1euro", 1)
+(1, "store1euro", 2)
+(2, "store1euro", 3)
+(3, "store1euro", 4)
+(4, "store1euro", 5)
+(5, "empty1euro", 0)

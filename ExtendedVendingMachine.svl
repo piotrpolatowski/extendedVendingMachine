@@ -1,0 +1,29 @@
+"1euro.aut" = generation of
+   (
+      ("1euroManagment.aut"|["empty1euro"]|"1euroStorage.aut"));
+
+"2euro.aut" = generation of
+   (
+      ("2euroManagment.aut"|["empty2euro"]|"2euroStorage.aut"));
+
+"CoinManagment.aut" = generation of
+	("1euro.aut" |[]| "2euro.aut");
+
+"Cola.aut" = generation of
+   (
+      ("ColaManagment.aut" |["refillCola"]| "ColaStorage.aut"));
+
+"Water.aut" = generation of
+   (
+      ("WaterManagment.aut" |["refillWater"]| "WaterStorage.aut"));
+
+"BottleManagment.aut" = generation of
+	("Cola.aut" |[]| "Water.aut");
+
+"ExtendedVendingMachine.aut" = generation of
+
+      (
+         ("PN.aut" |["store1euro", "store2euro"]| "CoinManagment.aut") |["getCola", "getWater"]| "BottleManagment.aut");
+
+"MandatoryAssigment.aut" = generation of
+   ("ExtendedVendingMachine.aut" |["1euro", "2euro", "bottleOfCola", "bottleOfWater"]| "CU.aut");
